@@ -49,11 +49,17 @@ npm run build
 ## 트래픽 · SEO 체크리스트
 
 - [x] 도구별 개별 URL + `title`/`description`/canonical/hreflang 메타데이터
+- [x] 카카오톡/트위터/페이스북 공유용 OpenGraph 태그 + `opengraph-image` 동적 생성(페이지별 1200x630 이미지, 빌드 시 정적 생성)
 - [x] `sitemap.xml`, `robots.txt` 자동 생성
-- [x] 도구 페이지에 `SoftwareApplication` JSON-LD 구조화 데이터
+- [x] 도구 페이지에 `SoftwareApplication` + `FAQPage` JSON-LD 구조화 데이터
+- [x] 도구마다 사용법(`<h2>`)·FAQ(`<h2>`/`<h3>`) 섹션을 SSG 시점에 HTML로 출력 (얇은 콘텐츠 방지, 크롤러가 텍스트로 바로 읽음)
+- [x] `next/font`(Noto Sans KR, self-hosted)로 FOUT/FOIT 방지, `next/image`로 결과 미리보기 이미지 최적화
+- [x] Lighthouse 실측: 데스크톱 Performance/SEO/Accessibility/Best Practices 100점, 모바일 Performance 90점 (`/ko/tools/word-counter` 기준, 로컬 정적 서버 측정)
 - [ ] 실제 도메인 연결 후 `NEXT_PUBLIC_SITE_URL` 설정
 - [ ] Google Search Console 등록 및 사이트맵 제출
 - [ ] 콘텐츠(도구 설명, FAQ 등) 지속적으로 보강해 검색 유입 확대
+
+> 모바일 Performance 점수는 Lighthouse의 저사양 CPU/느린 네트워크 시뮬레이션 기준이며, 실제 CDN(예: Vercel Edge Network)에 배포하면 이보다 개선될 가능성이 높습니다.
 
 ## Google AdSense 연동 방법
 

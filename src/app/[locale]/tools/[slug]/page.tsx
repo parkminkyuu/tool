@@ -41,6 +41,11 @@ export async function generateMetadata({
       url: `${siteUrl}/${locale}/tools/${slug}`,
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t.name,
+      description: t.description,
+    },
   };
 }
 
@@ -59,7 +64,7 @@ export default async function ToolPage({
   const t = tool[locale];
   const ToolComponent = toolComponents[slug];
 
-  const jsonLd = {
+  const softwareAppJsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: t.name,
@@ -70,11 +75,25 @@ export default async function ToolPage({
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: t.faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <div>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <nav className="text-sm text-slate-500 mb-4">
         <Link href={`/${locale}`} className="hover:text-slate-900">
@@ -95,6 +114,27 @@ export default async function ToolPage({
       </div>
 
       <AdSlot slot="2222222222" className="my-10 h-24" />
+
+      <section className="mt-10 max-w-2xl">
+        <h2 className="text-lg font-bold text-slate-900 mb-3">{dict.common.howTo}</h2>
+        <ol className="list-decimal list-inside space-y-2 text-sm text-slate-600">
+          {t.howTo.map((step, i) => (
+            <li key={i}>{step}</li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="mt-10 max-w-2xl">
+        <h2 className="text-lg font-bold text-slate-900 mb-3">{dict.common.faq}</h2>
+        <div className="space-y-5">
+          {t.faq.map((item, i) => (
+            <div key={i}>
+              <h3 className="font-medium text-slate-900">{item.q}</h3>
+              <p className="mt-1 text-sm text-slate-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <RelatedTools tool={tool} locale={locale} dict={dict} />
     </div>

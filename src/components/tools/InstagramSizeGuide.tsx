@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import NextImage from "next/image";
 import type { Locale } from "@/lib/locales";
 
 const strings = {
@@ -163,11 +164,12 @@ export default function InstagramSizeGuide({ locale }: { locale: Locale }) {
 
         {resultUrl && (
           <div className="mt-4 flex flex-col items-center gap-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <NextImage
               src={resultUrl}
               alt="preview"
-              className="max-w-full max-h-96 rounded-md border border-slate-200"
+              width={spec.width}
+              height={spec.height}
+              className="max-w-full max-h-96 w-auto h-auto rounded-md border border-slate-200"
             />
             <a
               href={resultUrl}

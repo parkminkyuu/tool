@@ -39,6 +39,8 @@ export type Dictionary = {
     backToHome: string;
     input: string;
     output: string;
+    howTo: string;
+    faq: string;
   };
 };
 
@@ -81,6 +83,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       backToHome: "홈으로",
       input: "입력",
       output: "결과",
+      howTo: "사용법",
+      faq: "자주 묻는 질문",
     },
   },
   en: {
@@ -121,6 +125,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       backToHome: "Back to home",
       input: "Input",
       output: "Output",
+      howTo: "How to use",
+      faq: "Frequently asked questions",
     },
   },
 };

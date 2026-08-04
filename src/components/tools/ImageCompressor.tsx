@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import NextImage from "next/image";
 import type { Locale } from "@/lib/locales";
 
 const strings = {
@@ -41,6 +42,9 @@ export default function ImageCompressor({ locale }: { locale: Locale }) {
   const [originalSize, setOriginalSize] = useState<number | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const [resultSize, setResultSize] = useState<number | null>(null);
+  const [resultDims, setResultDims] = useState<{ width: number; height: number } | null>(
+    null
+  );
   const [quality, setQuality] = useState(0.8);
   const [maxWidth, setMaxWidth] = useState(1600);
   const [format, setFormat] = useState<"image/jpeg" | "image/webp" | "image/png">(
@@ -70,6 +74,7 @@ export default function ImageCompressor({ locale }: { locale: Locale }) {
             return URL.createObjectURL(blob);
           });
           setResultSize(blob.size);
+          setResultDims({ width: targetW, height: targetH });
           setProcessing(false);
         },
         f,
@@ -217,13 +222,14 @@ export default function ImageCompressor({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          {resultUrl && (
+          {resultUrl && resultDims && (
             <div className="mt-4 flex flex-col items-center gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <NextImage
                 src={resultUrl}
                 alt="preview"
-                className="max-w-full max-h-80 rounded-md border border-slate-200"
+                width={resultDims.width}
+                height={resultDims.height}
+                className="max-w-full max-h-80 w-auto h-auto rounded-md border border-slate-200"
               />
               <a
                 href={resultUrl}

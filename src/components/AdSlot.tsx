@@ -35,7 +35,7 @@ export default function AdSlot({
   if (!adsenseClient) {
     return (
       <div
-        className={`flex items-center justify-center border border-dashed border-slate-300 bg-slate-50 text-xs text-slate-400 rounded-md min-h-24 ${className}`}
+        className={`flex items-center justify-center border border-dashed border-slate-300 bg-slate-50 text-xs text-slate-600 rounded-md min-h-24 ${className}`}
         aria-hidden
       >
         Ad Placeholder

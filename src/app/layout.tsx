@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Noto_Sans_KR } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+
+const notoSansKR = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-sans",
+  preload: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -13,7 +22,7 @@ const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className="h-full antialiased">
+    <html lang="ko" className={`${notoSansKR.variable} h-full antialiased`}>
       <head>
         {adsenseClient ? (
           <Script
