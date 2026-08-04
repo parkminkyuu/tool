@@ -16,12 +16,14 @@ export type Dictionary = {
     image: string;
     calculator: string;
     developer: string;
+    instagram: string;
   };
   categoryDescriptions: {
     text: string;
     image: string;
     calculator: string;
     developer: string;
+    instagram: string;
   };
   footer: {
     madeWith: string;
@@ -56,12 +58,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
       image: "이미지 도구",
       calculator: "계산기 · 변환기",
       developer: "개발자 도구",
+      instagram: "인스타그램 도구",
     },
     categoryDescriptions: {
       text: "글자수 세기, 대소문자 변환, 중복 줄 제거 등",
       image: "이미지 압축, 리사이즈 등 브라우저에서 바로 처리",
       calculator: "단위 변환, 퍼센트 계산, BMI 계산 등",
       developer: "JSON 포맷터, Base64, URL 인코더 등",
+      instagram: "인스타 폰트 생성기, 언팔 확인, 사이즈 가이드 등",
     },
     footer: {
       madeWith: "모든 도구는 브라우저에서 동작하며 입력한 데이터를 서버로 전송하지 않습니다.",
@@ -94,12 +98,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
       image: "Image Tools",
       calculator: "Calculators & Converters",
       developer: "Developer Tools",
+      instagram: "Instagram Tools",
     },
     categoryDescriptions: {
       text: "Word counter, case converter, remove duplicate lines, and more",
       image: "Compress and resize images directly in your browser",
       calculator: "Unit conversion, percentage calculator, BMI calculator, and more",
       developer: "JSON formatter, Base64, URL encoder, and more",
+      instagram: "Font generator, unfollow checker, size guide, and more",
     },
     footer: {
       madeWith: "All tools run in your browser — your data is never sent to a server.",

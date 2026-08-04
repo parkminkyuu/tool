@@ -10,6 +10,9 @@ import UnitConverter from "./UnitConverter";
 import PercentageCalculator from "./PercentageCalculator";
 import BmiCalculator from "./BmiCalculator";
 import ImageCompressor from "./ImageCompressor";
+import InstagramFontGenerator from "./InstagramFontGenerator";
+import InstagramUnfollowChecker from "./InstagramUnfollowChecker";
+import InstagramSizeGuide from "./InstagramSizeGuide";
 
 export const toolComponents: Record<
   string,
@@ -25,4 +28,7 @@ export const toolComponents: Record<
   "percentage-calculator": PercentageCalculator,
   "bmi-calculator": BmiCalculator,
   "image-compressor": ImageCompressor,
+  "instagram-font-generator": InstagramFontGenerator,
+  "instagram-unfollow-checker": InstagramUnfollowChecker,
+  "instagram-size-guide": InstagramSizeGuide,
 };

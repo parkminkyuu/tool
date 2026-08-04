@@ -1,4 +1,9 @@
-export type ToolCategory = "text" | "image" | "calculator" | "developer";
+export type ToolCategory =
+  | "instagram"
+  | "text"
+  | "image"
+  | "calculator"
+  | "developer";
 
 export type ToolMeta = {
   slug: string;
@@ -9,6 +14,7 @@ export type ToolMeta = {
 };
 
 export const toolCategories: ToolCategory[] = [
+  "instagram",
   "text",
   "developer",
   "calculator",
@@ -16,6 +22,57 @@ export const toolCategories: ToolCategory[] = [
 ];
 
 export const tools: ToolMeta[] = [
+  {
+    slug: "instagram-font-generator",
+    category: "instagram",
+    icon: "𝓐",
+    ko: {
+      name: "인스타 폰트 생성기",
+      shortDesc: "굵게, 필기체, 두들체 등 인스타 프로필/게시글용 특수문자 폰트를 만듭니다",
+      description:
+        "텍스트를 입력하면 굵게, 이탤릭체, 필기체, 고딕체, 동그라미체, 뒤집힌 글자 등 다양한 유니코드 특수문자 폰트로 변환해주는 도구입니다. 변환된 텍스트는 그대로 복사해서 인스타그램 프로필 소개글이나 게시글에 붙여넣을 수 있습니다.",
+    },
+    en: {
+      name: "Instagram Font Generator",
+      shortDesc: "Turn plain text into bold, cursive, and other fancy Unicode fonts",
+      description:
+        "Convert plain text into bold, italic, cursive, gothic, circled, upside-down, and other fancy Unicode fonts for your Instagram bio or captions. Just copy and paste — no app install needed.",
+    },
+  },
+  {
+    slug: "instagram-unfollow-checker",
+    category: "instagram",
+    icon: "👥",
+    ko: {
+      name: "인스타 언팔 확인하기",
+      shortDesc: "맞팔로우 안 하는 계정을 안전하게 확인합니다 (로그인 불필요)",
+      description:
+        "인스타그램 공식 '정보 다운로드' 기능으로 받은 팔로워/팔로잉 목록 파일(JSON)을 업로드하면, 내가 팔로우하지만 나를 팔로우하지 않는 계정과 그 반대 목록을 브라우저에서 바로 계산해줍니다. 아이디나 비밀번호 입력이 전혀 필요 없고 파일은 서버로 전송되지 않습니다.",
+    },
+    en: {
+      name: "Instagram Unfollow Checker",
+      shortDesc: "Find accounts that don't follow you back — no login required",
+      description:
+        "Upload the followers/following JSON files from Instagram's official 'Download Your Information' export to instantly see who doesn't follow you back, all processed locally in your browser. No username or password required, and your files are never uploaded anywhere.",
+    },
+  },
+  {
+    slug: "instagram-size-guide",
+    category: "instagram",
+    icon: "📏",
+    ko: {
+      name: "인스타그램 사이즈 가이드",
+      shortDesc: "피드, 스토리, 릴스 권장 이미지 규격과 미리보기 크롭 도구",
+      description:
+        "인스타그램 피드(정사각형/세로형/가로형), 스토리, 릴스, 프로필 사진의 최신 권장 해상도와 비율을 한눈에 확인하고, 이미지를 업로드해 원하는 비율로 미리 크롭 후 다운로드할 수 있는 도구입니다.",
+    },
+    en: {
+      name: "Instagram Size Guide",
+      shortDesc: "Recommended image dimensions for feed, story, and reels + crop preview",
+      description:
+        "Check the latest recommended dimensions and aspect ratios for Instagram feed posts (square/portrait/landscape), stories, reels, and profile pictures — then upload an image to preview a center crop and download it at the right size.",
+    },
+  },
   {
     slug: "word-counter",
     category: "text",
