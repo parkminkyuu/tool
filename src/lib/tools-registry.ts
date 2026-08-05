@@ -968,6 +968,281 @@ export const tools: ToolMeta[] = [
     },
   },
   {
+    slug: "school-grade-calculator",
+    category: "calculator",
+    icon: "🎒",
+    ko: {
+      name: "학년 계산기",
+      shortDesc: "출생연도로 초·중·고 입학연도와 현재 학년을 바로 확인합니다",
+      description:
+        "생년월일을 입력하면 초등학교·중학교·고등학교 입학 연도와, 오늘 기준 현재 몇 학년인지를 바로 계산해주는 도구입니다. 자녀 취학 시기를 미리 확인하려는 부모님께 유용합니다.",
+      howTo: [
+        "자녀(또는 본인)의 생년월일을 입력합니다.",
+        "초·중·고 입학 연도가 자동으로 계산됩니다.",
+        "오늘 날짜 기준 현재 학년도 함께 표시됩니다.",
+      ],
+      faq: [
+        {
+          q: "입학 연도는 어떻게 정해지나요?",
+          a: "초등학교는 만 6세가 되는 해의 3월 1일에 입학합니다. 즉 3월 2일부터 그 다음 해 3월 1일 사이에 태어난 아이들이 같은 학년으로 묶입니다.",
+        },
+        {
+          q: "이른바 '빠른년생'도 이 계산기로 확인할 수 있나요?",
+          a: "이 계산기는 2009년 이후 폐지된 빠른입학(조기입학) 제도가 아니라 현재의 표준 취학 기준을 따릅니다. 과거에 빠른입학으로 실제 학교를 다닌 경우는 실제 이력과 다를 수 있습니다.",
+        },
+        {
+          q: "정확히 몇 학년인지는 언제 기준으로 계산되나요?",
+          a: "한국의 학년도는 3월에 시작해서 다음 해 2월에 끝납니다. 이 도구는 오늘 날짜가 속한 학년도를 기준으로 현재 학년을 계산합니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Korean School Grade Calculator",
+      shortDesc: "Find elementary/middle/high school entry years and current grade from a birth date",
+      description:
+        "Enter a birth date to instantly see the elementary, middle, and high school entry years, plus the current grade as of today — useful for parents planning ahead for their child's school enrollment.",
+      howTo: [
+        "Enter the child's (or your own) date of birth.",
+        "Elementary, middle, and high school entry years are calculated automatically.",
+        "The current grade as of today is also shown.",
+      ],
+      faq: [
+        {
+          q: "How is the entry year determined?",
+          a: "Korean elementary school starts on March 1st of the year a child turns 6. So children born between March 2nd and March 1st of the following year are grouped into the same grade.",
+        },
+        {
+          q: "Does this account for 'early birth year' (빠른년생) enrollment?",
+          a: "This tool follows the current standard enrollment rule, not the early-enrollment system that was phased out after 2009. If someone actually attended school early under the old system, their real history may differ.",
+        },
+        {
+          q: "What date is 'current grade' based on?",
+          a: "Korea's school year runs from March to the following February. This tool calculates the current grade based on which school year today's date falls into.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "leap-birthday-calculator",
+    category: "calculator",
+    icon: "🐸",
+    ko: {
+      name: "윤년 생일(2월 29일) 계산기",
+      shortDesc: "2월 29일생의 만 나이와 다음 진짜 생일까지 남은 날짜를 계산합니다",
+      description:
+        "2월 29일에 태어난 사람들을 위한 도구입니다. 현재 만 나이와 다음으로 돌아오는 진짜 생일(2월 29일)까지 며칠 남았는지, 평년에는 생일을 언제로 기념하는지를 함께 보여줍니다.",
+      howTo: [
+        "출생연도를 입력합니다.",
+        "현재 만 나이와 다음 2월 29일까지 남은 날짜가 계산됩니다.",
+        "평년 생일 기념 관례도 함께 확인할 수 있습니다.",
+      ],
+      faq: [
+        {
+          q: "평년에는 법적으로 생일이 언제인가요?",
+          a: "한국 법률에 2월 29일생의 생일을 명시적으로 정한 조항은 없지만, 민법의 기간 계산 원칙에 따라 평년에는 2월 28일이 지나 3월 1일이 될 때 만 나이가 증가하는 것으로 해석하는 것이 일반적입니다. 실제 기념일은 2월 28일 또는 3월 1일 중 개인이 선택하는 경우가 많습니다.",
+        },
+        {
+          q: "윤년은 몇 년마다 돌아오나요?",
+          a: "4년마다 돌아오는 것이 기본이지만, 100으로 나누어떨어지면서 400으로는 나누어떨어지지 않는 연도(예: 1900년, 2100년)는 예외적으로 윤년이 아닙니다.",
+        },
+        {
+          q: "이 계산기의 만 나이는 다른 만 나이 계산기와 다른가요?",
+          a: "계산 원리는 동일합니다. 다만 2월 29일생은 평년의 2월에 해당 날짜가 없기 때문에, 이 도구는 자동으로 3월 1일을 기준으로 나이 증가 시점을 계산합니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Leap Day (Feb 29) Birthday Calculator",
+      shortDesc: "Age and countdown to the next real birthday for people born on Feb 29",
+      description:
+        "A dedicated tool for people born on February 29th. See your current international age, the countdown to your next actual birthday, and how non-leap-year birthdays are conventionally observed.",
+      howTo: [
+        "Enter your birth year.",
+        "Your current international age and the countdown to the next Feb 29 are calculated.",
+        "See the common convention for celebrating in non-leap years.",
+      ],
+      faq: [
+        {
+          q: "Is there a legal rule for when Feb 29 birthdays fall in non-leap years?",
+          a: "Korean law has no explicit rule naming the exact date, but the Civil Code's general period-calculation principle is commonly interpreted as incrementing age once February ends and March 1st begins in a non-leap year. Many people personally choose to celebrate on either Feb 28 or March 1.",
+        },
+        {
+          q: "How often does a leap year occur?",
+          a: "Every 4 years as a baseline, except years divisible by 100 but not by 400 (e.g., 1900, 2100), which are not leap years despite being divisible by 4.",
+        },
+        {
+          q: "Does this tool calculate age differently from a regular age calculator?",
+          a: "The underlying logic is the same. Since Feb 29 doesn't exist in a non-leap February, this tool naturally resolves the age-increment point to March 1st for those birthdays.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "volumetric-weight-calculator",
+    category: "calculator",
+    icon: "📦",
+    ko: {
+      name: "택배 부피무게 계산기",
+      shortDesc: "박스 크기로 부피무게를 계산해 실제 청구 무게를 예상합니다",
+      description:
+        "박스의 가로·세로·높이를 입력하면 부피무게(용적중량)를 계산하고, 실측 무게와 비교해 배송비 산정에 적용될 가능성이 높은 무게를 예상해주는 도구입니다. 해외직구나 부피가 크고 가벼운 물건을 보낼 때 유용합니다.",
+      howTo: [
+        "박스의 가로·세로·높이(cm)를 입력합니다.",
+        "실측 무게를 알고 있다면 함께 입력합니다.",
+        "환산 계수(6000 또는 5000)를 이용 택배사 기준에 맞게 선택합니다.",
+      ],
+      faq: [
+        {
+          q: "부피무게는 왜 계산하나요?",
+          a: "박스가 크지만 가벼운 경우, 실제 무게보다 부피 기준으로 계산한 무게가 더 커서 배송비가 부피 기준으로 청구되는 경우가 많기 때문입니다.",
+        },
+        {
+          q: "환산 계수는 어떤 걸 선택해야 하나요?",
+          a: "국제택배나 항공특송은 보통 6000을 사용하지만, 국내 택배사나 화물 종류에 따라 5000을 사용하는 경우도 있습니다. 정확한 배송비 산정을 위해서는 실제 이용하는 업체의 계산 기준을 확인하는 것이 가장 정확합니다.",
+        },
+        {
+          q: "실측 무게를 입력하지 않으면 어떻게 되나요?",
+          a: "실측 무게 없이도 부피무게만 계산해서 보여드립니다. 실측 무게를 입력하면 부피무게와 비교해 더 큰 값을 적용 무게로 표시합니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Volumetric Weight Calculator",
+      shortDesc: "Estimate a package's billable weight from its box dimensions",
+      description:
+        "Enter a box's width, length, and height to calculate its volumetric weight, then compare it against the actual weight to estimate which figure is likely to be used for shipping charges — handy for overseas orders or large, lightweight packages.",
+      howTo: [
+        "Enter the box's width, length, and height in cm.",
+        "Enter the actual weight if you know it.",
+        "Pick the divisor (6000 or 5000) that matches your carrier's standard.",
+      ],
+      faq: [
+        {
+          q: "Why does volumetric weight matter?",
+          a: "For large but light boxes, the weight calculated from volume often exceeds the actual weight, and many carriers bill based on whichever is larger.",
+        },
+        {
+          q: "Which divisor should I choose?",
+          a: "International and air couriers typically use 6000, while some domestic carriers or cargo types use 5000. For an exact shipping cost, check the specific formula your carrier uses.",
+        },
+        {
+          q: "What if I don't know the actual weight?",
+          a: "The tool still shows the volumetric weight on its own. If you enter an actual weight too, it displays whichever of the two is larger as the likely chargeable weight.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "chosung-converter",
+    category: "text",
+    icon: "ㄱㄴㄷ",
+    ko: {
+      name: "초성 변환기",
+      shortDesc: "한글 문장을 자음(초성)만 추출해 변환합니다",
+      description:
+        "입력한 한글 문장을 각 글자의 초성(첫 자음)만 남긴 형태로 변환하는 도구입니다. 초성 퀴즈 문제 만들기, 메모를 간단히 줄이기, 스포일러를 가리는 용도 등으로 활용할 수 있습니다.",
+      howTo: [
+        "변환하고 싶은 한글 문장을 입력합니다.",
+        "초성만 추출된 결과가 실시간으로 표시됩니다.",
+        "복사 버튼으로 결과를 바로 복사해 사용합니다.",
+      ],
+      faq: [
+        {
+          q: "영어나 숫자, 띄어쓰기는 어떻게 처리되나요?",
+          a: "한글 음절이 아닌 문자(영어, 숫자, 띄어쓰기, 특수문자)는 변환되지 않고 원래 형태 그대로 유지됩니다.",
+        },
+        {
+          q: "받침이 있는 글자도 초성만 추출되나요?",
+          a: "네, 받침이나 겹모음 등 글자 구성과 관계없이 각 글자의 첫 자음(초성)만 추출합니다. 예를 들어 '값'은 'ㄱ'으로 변환됩니다.",
+        },
+        {
+          q: "이미 자음만 입력하면 어떻게 되나요?",
+          a: "'ㄱ', 'ㄴ'처럼 이미 완성된 글자가 아닌 낱자음/낱모음은 변환 대상이 아니므로 입력한 그대로 표시됩니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Chosung (Initial Consonant) Converter",
+      shortDesc: "Extract only the initial consonants from a Korean sentence",
+      description:
+        "Convert a Korean sentence into just its initial consonants (chosung) — handy for making chosung quiz questions, shorthand notes, or hiding spoilers in a message.",
+      howTo: [
+        "Enter the Korean sentence you want to convert.",
+        "The chosung-only result updates in real time.",
+        "Use the copy button to grab the result instantly.",
+      ],
+      faq: [
+        {
+          q: "What happens to English, numbers, or spaces?",
+          a: "Any character that isn't a composed Korean syllable (English letters, numbers, spaces, punctuation) is left unchanged.",
+        },
+        {
+          q: "Does this work for syllables with a final consonant (batchim)?",
+          a: "Yes — regardless of the syllable's internal structure, only its initial consonant is extracted. For example, '값' converts to 'ㄱ'.",
+        },
+        {
+          q: "What if I type standalone consonants or vowels?",
+          a: "Standalone jamo characters like 'ㄱ' or 'ㄴ' aren't composed syllables, so they're left exactly as typed.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "annual-leave-days-calculator",
+    category: "calculator",
+    icon: "🌴",
+    ko: {
+      name: "연차 발생일수 계산기",
+      shortDesc: "입사일 기준으로 올해 발생하는 연차 일수를 계산합니다",
+      description:
+        "입사일을 입력하면 근로기준법 기준으로 현재까지 발생한 연차휴가 일수를 계산해주는 도구입니다. 입사 1년 미만은 개근 시 매월 1일씩, 1년 이상은 근속연수에 따라 가산되는 방식을 그대로 반영합니다.",
+      howTo: [
+        "입사일을 입력합니다.",
+        "필요하다면 기준일을 오늘이 아닌 다른 날짜로 변경합니다.",
+        "현재까지 발생한 연차 일수가 계산되어 표시됩니다.",
+      ],
+      faq: [
+        {
+          q: "입사 1년 미만은 연차가 어떻게 계산되나요?",
+          a: "입사 후 1개월을 개근할 때마다 1일의 연차가 발생하며, 첫 1년 동안 최대 11일까지 발생합니다.",
+        },
+        {
+          q: "근속연수가 늘어나면 연차도 계속 늘어나나요?",
+          a: "네, 입사 1년 이상부터는 기본 15일이 발생하고, 3년차부터 매 2년마다 1일씩 가산됩니다. 다만 가산 연차를 포함한 총 연차는 25일을 넘지 않습니다.",
+        },
+        {
+          q: "이 계산이 회사 규정과 다를 수 있나요?",
+          a: "네, 이 도구는 근로기준법 제60조의 표준 계산식을 기준으로 하며, 회사가 회계연도 기준으로 연차를 부여하거나 별도 규정을 두는 경우 실제 발생 일수와 다를 수 있습니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Annual Leave Days Calculator",
+      shortDesc: "Calculate accrued annual leave days from your hire date",
+      description:
+        "Enter your hire date to calculate how many annual leave days you've accrued under Korea's Labor Standards Act — 1 day per month of perfect attendance in the first year, then a base of 15 days plus bonus days for tenure after that.",
+      howTo: [
+        "Enter your hire date.",
+        "Optionally change the reference date to something other than today.",
+        "The accrued annual leave days as of that date are calculated.",
+      ],
+      faq: [
+        {
+          q: "How is leave calculated in the first year?",
+          a: "One day of leave accrues for each full month of perfect attendance after hiring, up to a maximum of 11 days in the first year.",
+        },
+        {
+          q: "Does leave keep increasing with tenure?",
+          a: "Yes — after 1 year of employment, a base of 15 days applies, plus 1 additional day every 2 years starting from year 3. The total, including bonus days, is capped at 25.",
+        },
+        {
+          q: "Could this differ from my company's actual policy?",
+          a: "Yes — this tool follows the standard formula under Article 60 of the Labor Standards Act. Companies that grant leave on a fiscal-year basis or have their own policies may calculate differently.",
+        },
+      ],
+    },
+  },
+  {
     slug: "image-compressor",
     category: "image",
     icon: "🖼️",

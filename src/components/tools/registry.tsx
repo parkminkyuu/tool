@@ -18,6 +18,11 @@ import JeonseRentConverter from "./JeonseRentConverter";
 import PyeongSqmConverter from "./PyeongSqmConverter";
 import MilitaryDischargeCalculator from "./MilitaryDischargeCalculator";
 import WeeklyHolidayPayCalculator from "./WeeklyHolidayPayCalculator";
+import SchoolGradeCalculator from "./SchoolGradeCalculator";
+import LeapBirthdayCalculator from "./LeapBirthdayCalculator";
+import VolumetricWeightCalculator from "./VolumetricWeightCalculator";
+import ChosungConverter from "./ChosungConverter";
+import AnnualLeaveDaysCalculator from "./AnnualLeaveDaysCalculator";
 
 export const toolComponents: Record<
   string,
@@ -41,4 +46,9 @@ export const toolComponents: Record<
   "pyeong-sqm-converter": PyeongSqmConverter,
   "military-discharge-calculator": MilitaryDischargeCalculator,
   "weekly-holiday-pay-calculator": WeeklyHolidayPayCalculator,
+  "school-grade-calculator": SchoolGradeCalculator,
+  "leap-birthday-calculator": LeapBirthdayCalculator,
+  "volumetric-weight-calculator": VolumetricWeightCalculator,
+  "chosung-converter": ChosungConverter,
+  "annual-leave-days-calculator": AnnualLeaveDaysCalculator,
 };
