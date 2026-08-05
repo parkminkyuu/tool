@@ -46,6 +46,15 @@ npm run build
 라우트, 메타데이터(SEO), 사이트맵, 관련 도구 섹션은 등록된 정보를 기반으로
 자동 생성됩니다.
 
+## 매년 업데이트가 필요한 값
+
+한국 특화 계산기 중 일부는 매년 바뀌는 법정 수치를 기본값으로 사용합니다.
+연초에 아래 값을 확인해서 업데이트하세요.
+
+- `WeeklyHolidayPayCalculator.tsx`의 시급 기본값 (매년 1월 최저임금 고시)
+- `MilitaryDischargeCalculator.tsx`의 군종별 복무기간 (병역법 개정 시)
+- `tools-registry.ts`의 `weekly-holiday-pay-calculator` 설명/FAQ에 적힌 연도·금액 문구
+
 ## 트래픽 · SEO 체크리스트
 
 - [x] 도구별 개별 URL + `title`/`description`/canonical/hreflang 메타데이터

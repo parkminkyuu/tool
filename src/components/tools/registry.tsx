@@ -13,6 +13,11 @@ import ImageCompressor from "./ImageCompressor";
 import InstagramFontGenerator from "./InstagramFontGenerator";
 import InstagramUnfollowChecker from "./InstagramUnfollowChecker";
 import InstagramSizeGuide from "./InstagramSizeGuide";
+import KoreanAgeCalculator from "./KoreanAgeCalculator";
+import JeonseRentConverter from "./JeonseRentConverter";
+import PyeongSqmConverter from "./PyeongSqmConverter";
+import MilitaryDischargeCalculator from "./MilitaryDischargeCalculator";
+import WeeklyHolidayPayCalculator from "./WeeklyHolidayPayCalculator";
 
 export const toolComponents: Record<
   string,
@@ -31,4 +36,9 @@ export const toolComponents: Record<
   "instagram-font-generator": InstagramFontGenerator,
   "instagram-unfollow-checker": InstagramUnfollowChecker,
   "instagram-size-guide": InstagramSizeGuide,
+  "korean-age-calculator": KoreanAgeCalculator,
+  "jeonse-rent-converter": JeonseRentConverter,
+  "pyeong-sqm-converter": PyeongSqmConverter,
+  "military-discharge-calculator": MilitaryDischargeCalculator,
+  "weekly-holiday-pay-calculator": WeeklyHolidayPayCalculator,
 };

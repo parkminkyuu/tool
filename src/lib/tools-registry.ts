@@ -693,6 +693,281 @@ export const tools: ToolMeta[] = [
     },
   },
   {
+    slug: "korean-age-calculator",
+    category: "calculator",
+    icon: "🎂",
+    ko: {
+      name: "만 나이 계산기",
+      shortDesc: "만 나이, 연 나이, 세는 나이를 한 번에 계산합니다",
+      description:
+        "생년월일을 입력하면 2023년부터 법적 기준이 된 만 나이와, 병역법 등 일부 법령에서 쓰이는 연 나이, 일상 대화에서 쓰이는 세는 나이를 한 번에 계산해주는 도구입니다.",
+      howTo: [
+        "생년월일을 입력합니다.",
+        "필요하다면 기준일(오늘이 아닌 특정 날짜)을 변경합니다.",
+        "만 나이, 연 나이, 세는 나이가 동시에 계산되어 표시됩니다.",
+      ],
+      faq: [
+        {
+          q: "만 나이와 세는 나이는 왜 다른가요?",
+          a: "세는 나이는 태어난 해를 1살로 치고 매년 1월 1일마다 한 살씩 더하는 전통적 계산법이고, 만 나이는 생일이 지나야 한 살이 늘어나는 국제 기준 계산법입니다. 2023년 6월부터 대부분의 법령에서 만 나이가 공식 기준이 되었습니다.",
+        },
+        {
+          q: "연 나이는 언제 사용하나요?",
+          a: "병역법, 청소년보호법 등 일부 법령은 아직 '해당 연도 - 출생 연도'로 계산하는 연 나이를 기준으로 삼습니다. 예를 들어 병역 판정 검사 대상 연령은 연 나이로 정해집니다.",
+        },
+        {
+          q: "기준일을 오늘이 아닌 다른 날짜로 계산할 수 있나요?",
+          a: "네, 기준일 입력란을 원하는 날짜로 바꾸면 그 날짜 기준 나이를 확인할 수 있습니다. 예를 들어 특정 시험일이나 입학일 기준 나이를 미리 확인할 때 유용합니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Korean Age Calculator",
+      shortDesc: "Calculate international (man-nai), year, and counting age at once",
+      description:
+        "Enter a birth date to instantly see Korea's official international age (man-nai, legal standard since 2023), the 'year age' still used in a few statutes, and the traditional counting age used in everyday conversation.",
+      howTo: [
+        "Enter the date of birth.",
+        "Optionally change the reference date if you want the age as of a specific date rather than today.",
+        "International age, year age, and counting age are all calculated at once.",
+      ],
+      faq: [
+        {
+          q: "Why do international age and counting age differ?",
+          a: "Counting age (se-neun-nai) treats birth year as age 1 and adds a year every January 1st. International age (man-nai) only increases after your birthday passes. Since June 2023, man-nai is the official legal standard for almost all purposes in Korea.",
+        },
+        {
+          q: "When is 'year age' used?",
+          a: "A few statutes — like the Military Service Act and Youth Protection Act — still calculate age as 'current year minus birth year,' independent of whether the birthday has passed.",
+        },
+        {
+          q: "Can I calculate age as of a date other than today?",
+          a: "Yes — change the reference date field to any date to see the age as of that day, useful for checking age requirements for a specific exam or enrollment date.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "jeonse-rent-converter",
+    category: "calculator",
+    icon: "🏠",
+    ko: {
+      name: "전월세 전환율 계산기",
+      shortDesc: "전세보증금을 월세로, 월세를 전세로 서로 환산합니다",
+      description:
+        "전세보증금 일부를 월세로 돌릴 때의 예상 월세, 또는 반대로 월세 계약을 전세 기준으로 환산했을 때의 보증금을 계산하는 도구입니다. 법정 전환율 상한 기준도 함께 안내합니다.",
+      howTo: [
+        "전세→월세 또는 월세→전세 중 계산 방향을 선택합니다.",
+        "보증금, 전환 후 보증금(또는 월세)과 전환율(%)을 입력합니다.",
+        "예상 월세 또는 환산 전세보증금이 자동으로 계산됩니다.",
+      ],
+      faq: [
+        {
+          q: "전환율은 어떤 값을 입력해야 하나요?",
+          a: "임대인과 협의한 전환율을 입력하면 됩니다. 계약 갱신 시에는 '한국은행 기준금리 + 연 2%p'와 '연 10%' 중 낮은 값이 법정 상한이므로, 협의된 전환율이 이 상한을 넘지 않는지 확인하는 용도로도 사용할 수 있습니다.",
+        },
+        {
+          q: "이 계산 결과가 법적 효력이 있나요?",
+          a: "아니요, 참고용 계산 결과입니다. 실제 계약 조건은 임대인·임차인 간 협의와 관련 법령에 따라 결정되며, 정확한 상한 기준은 국토교통부 렌트홈에서 확인하시길 권장합니다.",
+        },
+        {
+          q: "신규 계약에도 법정 상한이 적용되나요?",
+          a: "아니요, 법정 전환율 상한은 계약 갱신(갱신요구권 행사) 시에만 강제력이 있으며, 신규 계약의 전환율은 당사자 간 자유롭게 협의합니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Jeonse-to-Monthly Rent Converter",
+      shortDesc: "Convert between Korea's jeonse deposit and monthly rent systems",
+      description:
+        "Estimate the monthly rent when converting part of a jeonse (lump-sum) deposit into monthly rent, or the equivalent jeonse deposit for an existing monthly-rent contract — plus a plain-language note on the statutory conversion rate cap.",
+      howTo: [
+        "Choose the conversion direction: jeonse-to-rent or rent-to-jeonse.",
+        "Enter the deposit, the post-conversion deposit (or monthly rent), and the conversion rate (%).",
+        "The estimated monthly rent or equivalent jeonse deposit is calculated automatically.",
+      ],
+      faq: [
+        {
+          q: "What conversion rate should I enter?",
+          a: "Enter the rate you've agreed with your landlord. For lease renewals, the statutory cap is the lower of (Bank of Korea base rate + 2 percentage points) and 10% per year, so you can also use this tool to check whether an agreed rate stays under that cap.",
+        },
+        {
+          q: "Is this result legally binding?",
+          a: "No, it's a reference estimate only. Actual contract terms are set by agreement between landlord and tenant within the relevant law — check Korea's Rent Home portal for the current official cap.",
+        },
+        {
+          q: "Does the statutory cap apply to new contracts too?",
+          a: "No — the cap is only enforceable when a tenant exercises their lease renewal right. The rate for a brand-new contract is freely negotiated between the parties.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "pyeong-sqm-converter",
+    category: "calculator",
+    icon: "📏",
+    ko: {
+      name: "평수 ↔ 제곱미터 변환기",
+      shortDesc: "부동산 평수와 제곱미터(m²)를 서로 변환합니다",
+      description:
+        "한국 부동산에서 여전히 널리 쓰이는 '평' 단위를 공식 단위인 제곱미터(m²)로, 또는 그 반대로 즉시 변환해주는 도구입니다. 자주 찾는 아파트 평형표도 함께 제공합니다.",
+      howTo: [
+        "평 또는 제곱미터 중 아는 값을 입력합니다.",
+        "반대쪽 값이 자동으로 계산되어 표시됩니다.",
+        "아래 표에서 자주 검색되는 아파트 평형의 환산값도 바로 확인할 수 있습니다.",
+      ],
+      faq: [
+        {
+          q: "1평은 정확히 몇 제곱미터인가요?",
+          a: "1평은 정확히 400/121 m², 약 3.305785m²입니다.",
+        },
+        {
+          q: "왜 부동산 매물에는 아직도 평이 쓰이나요?",
+          a: "2007년부터 공식적으로는 제곱미터 표기가 의무화되었지만, 오랫동안 평 단위에 익숙해진 관행 때문에 부동산 시장에서는 여전히 평이 비공식적으로 함께 쓰입니다.",
+        },
+        {
+          q: "전용면적과 공급면적은 어떻게 다른가요?",
+          a: "전용면적은 실제로 거주자가 독점적으로 사용하는 실내 면적이고, 공급면적은 여기에 복도·계단 등 공용면적을 더한 값입니다. 이 도구의 평형표는 전용면적 기준입니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Pyeong ↔ Square Meter Converter",
+      shortDesc: "Convert between Korea's traditional 'pyeong' unit and square meters",
+      description:
+        "Instantly convert between 'pyeong' — the traditional area unit still widely used in Korean real estate listings — and the official metric unit, square meters (m²), with a reference table of common apartment sizes.",
+      howTo: [
+        "Enter whichever value you know: pyeong or square meters.",
+        "The other value is calculated automatically.",
+        "Check the table below for instant conversions of commonly searched apartment sizes.",
+      ],
+      faq: [
+        {
+          q: "How many square meters is exactly 1 pyeong?",
+          a: "1 pyeong is exactly 400/121 m², or about 3.305785 m².",
+        },
+        {
+          q: "Why is pyeong still used if it's not the official unit?",
+          a: "Square meters have been the officially required unit since 2007, but decades of habit mean pyeong is still used informally alongside it throughout the Korean real estate market.",
+        },
+        {
+          q: "What's the difference between exclusive area and supply area?",
+          a: "Exclusive area is the interior space a resident has sole use of; supply area adds shared spaces like hallways and stairwells on top of that. The size table in this tool uses exclusive area.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "military-discharge-calculator",
+    category: "calculator",
+    icon: "🎖️",
+    ko: {
+      name: "군대 전역일 계산기",
+      shortDesc: "입대일과 군종을 입력하면 전역 예정일과 디데이를 계산합니다",
+      description:
+        "입대일과 군종(육군/해병대, 해군, 공군)을 입력하면 전역 예정일, 남은 일수(디데이), 복무 진행률을 계산해주는 도구입니다.",
+      howTo: [
+        "군종을 선택하거나, 해당하지 않으면 '직접 입력'으로 복무 개월수를 입력합니다.",
+        "입대일을 입력합니다.",
+        "전역 예정일, 디데이, 복무 진행률이 자동으로 계산됩니다.",
+      ],
+      faq: [
+        {
+          q: "군종별 복무기간은 얼마인가요?",
+          a: "병역법 기준 표준 복무기간은 육군·해병대 18개월, 해군 20개월, 공군 21개월입니다. 사회복무요원 등 다른 병역 형태는 '직접 입력'을 이용해 해당 복무기간을 입력하세요.",
+        },
+        {
+          q: "계산된 전역일이 실제 전역일과 다를 수 있나요?",
+          a: "네, 이 계산기는 표준 복무기간을 기준으로 한 예상치입니다. 휴가, 교육 연기, 복무기간 조정 등 개인 사정에 따라 실제 전역일은 달라질 수 있으므로 정확한 날짜는 소속 부대나 병무청에서 확인하세요.",
+        },
+        {
+          q: "입력한 정보가 저장되거나 전송되나요?",
+          a: "아니요, 모든 계산은 브라우저에서만 이루어지며 입력한 날짜 정보는 서버로 전송되지 않습니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Military Discharge Date Calculator",
+      shortDesc: "Calculate your expected discharge date and D-day from enlistment date",
+      description:
+        "Enter your enlistment date and service branch (Army/Marines, Navy, Air Force) to calculate your expected discharge date, days remaining (D-day), and service progress.",
+      howTo: [
+        "Select your service branch, or choose 'Custom' to enter a specific service length.",
+        "Enter your enlistment date.",
+        "Your expected discharge date, D-day countdown, and service progress are calculated automatically.",
+      ],
+      faq: [
+        {
+          q: "How long is service for each branch?",
+          a: "Under Korea's Military Service Act, standard service length is 18 months for Army/Marines, 20 months for Navy, and 21 months for Air Force. For other service types like alternative civilian service, use the 'Custom' option to enter the correct length.",
+        },
+        {
+          q: "Could the calculated date differ from my actual discharge date?",
+          a: "Yes — this is an estimate based on standard service length. Leave, deferred training, or individual adjustments can shift your actual date, so confirm the exact date with your unit or the Military Manpower Administration.",
+        },
+        {
+          q: "Is my information stored or transmitted anywhere?",
+          a: "No, all calculations run locally in your browser and the dates you enter are never sent to a server.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "weekly-holiday-pay-calculator",
+    category: "calculator",
+    icon: "🗓️",
+    ko: {
+      name: "주휴수당 계산기",
+      shortDesc: "시급과 주 근무시간으로 주휴수당 지급 대상 여부와 금액을 계산합니다",
+      description:
+        "시급과 1주 소정근로시간을 입력하면 주휴수당 지급 대상인지 확인하고, 예상 주휴수당과 월 환산 금액을 계산해주는 아르바이트생·파트타임 근로자를 위한 도구입니다.",
+      howTo: [
+        "시급을 입력합니다 (기본값은 2026년 최저시급).",
+        "1주 소정근로시간을 입력합니다.",
+        "지급 대상 여부와 예상 주휴수당, 월 환산 금액이 계산됩니다.",
+      ],
+      faq: [
+        {
+          q: "주휴수당을 받으려면 어떤 조건을 채워야 하나요?",
+          a: "1주 소정근로시간이 15시간 이상이고, 그 주의 소정근로일에 결근 없이 개근해야 합니다. 지각이나 조퇴가 있어도 결근이 아니라면 주휴수당 대상에서 제외되지 않습니다.",
+        },
+        {
+          q: "주 40시간을 초과해서 일하면 주휴수당도 더 받나요?",
+          a: "아니요, 주휴수당은 최대 8시간분(하루치)까지만 인정되므로 40시간을 초과해 근무해도 주휴수당 자체는 늘어나지 않습니다.",
+        },
+        {
+          q: "최저시급은 매년 바뀌지 않나요?",
+          a: "네, 최저시급은 매년 새로 고시됩니다. 이 도구의 기본값은 2026년 기준이며, 다른 연도나 본인의 실제 시급을 입력하면 그 기준으로 다시 계산됩니다.",
+        },
+      ],
+    },
+    en: {
+      name: "Weekly Holiday Pay Calculator",
+      shortDesc: "Check eligibility and estimate Korea's weekly holiday pay (주휴수당)",
+      description:
+        "Enter your hourly wage and contracted weekly hours to check whether you qualify for Korea's weekly holiday pay (juhyu-sudang) and see the estimated weekly and monthly amounts — built for part-time and hourly workers.",
+      howTo: [
+        "Enter your hourly wage (defaults to the 2026 minimum wage).",
+        "Enter your contracted hours per week.",
+        "Eligibility, estimated weekly holiday pay, and the monthly equivalent are calculated automatically.",
+      ],
+      faq: [
+        {
+          q: "What conditions must I meet to receive weekly holiday pay?",
+          a: "You need to be contracted for 15+ hours per week and have no unexcused absences during that week's scheduled work days. Being late or leaving early doesn't disqualify you as long as it isn't a full absence.",
+        },
+        {
+          q: "Do I get more weekly holiday pay if I work over 40 hours?",
+          a: "No — weekly holiday pay is capped at 8 hours' worth of wages, so working beyond 40 hours a week doesn't increase it further.",
+        },
+        {
+          q: "Doesn't the minimum wage change every year?",
+          a: "Yes, Korea's minimum wage is set annually. This tool's default reflects the 2026 rate — enter a different year's rate or your actual hourly wage to recalculate.",
+        },
+      ],
+    },
+  },
+  {
     slug: "image-compressor",
     category: "image",
     icon: "🖼️",
