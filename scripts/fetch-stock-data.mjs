@@ -56,7 +56,10 @@ async function fetchTicker(symbol) {
   const prices = [];
   for (let i = 0; i < timestamps.length; i++) {
     const c = closes[i];
-    if (c == null) continue;
+    // Skip nulls and non-positive/non-finite values — Yahoo's adjusted
+    // close occasionally goes negative for very old data points around
+    // extreme capital restructuring events (seen on 000660.KS in 2001-02).
+    if (c == null || !(c > 0) || !isFinite(c)) continue;
     const d = new Date(timestamps[i] * 1000);
     const date = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(
       2,
