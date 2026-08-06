@@ -55,6 +55,28 @@ npm run build
 - `MilitaryDischargeCalculator.tsx`의 군종별 복무기간 (병역법 개정 시)
 - `tools-registry.ts`의 `weekly-holiday-pay-calculator` 설명/FAQ에 적힌 연도·금액 문구
 
+## 주가 데이터 파이프라인 (그때 샀더라면 계산기)
+
+`investment-time-machine` 도구는 국내외 주요 종목의 월별 종가 데이터를
+`src/data/stock-prices.json`에서 읽어 정적으로 렌더링합니다. 이 사이트는
+서버가 없는 완전 정적 구조라, 데이터는 브라우저가 아니라 GitHub Actions에서
+받아옵니다 (Yahoo Finance는 브라우저의 직접 호출(CORS)을 막아두었고, API 키가
+필요한 다른 무료 API들은 클라이언트에 키를 노출하면 방문자 전체가 같은
+키/한도를 공유하게 되는 문제가 있습니다).
+
+- 데이터 수집 스크립트: `scripts/fetch-stock-data.mjs` (Yahoo Finance 공개
+  차트 API 사용, Node 환경에서 실행 — 로컬에서 직접 돌리려면
+  `npm run fetch-stock-data`)
+- 자동화: `.github/workflows/update-stock-data.yml`이 매주 일요일(UTC 18:00,
+  KST 기준 월요일 새벽)에 자동 실행되어 데이터를 갱신하고 변경 사항이 있으면
+  커밋·푸시합니다. GitHub Actions 저장소 설정에서 수동 실행(`workflow_dispatch`)도
+  가능합니다.
+- 종목을 추가/변경하려면 `scripts/fetch-stock-data.mjs`의 `TICKERS` 배열을
+  수정한 뒤 스크립트를 실행하세요 (심볼은 Yahoo Finance 표기 기준, 코스피
+  종목은 `.KS` 접미사).
+- `src/data/stock-prices.json`이 아직 비어 있거나(`prices: []`) 오래됐다면
+  워크플로가 최소 한 번 실행될 때까지 기다리거나 수동으로 실행하세요.
+
 ## 트래픽 · SEO 체크리스트
 
 - [x] 도구별 개별 URL + `title`/`description`/canonical/hreflang 메타데이터

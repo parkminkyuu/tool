@@ -1243,6 +1243,61 @@ export const tools: ToolMeta[] = [
     },
   },
   {
+    slug: "investment-time-machine",
+    category: "calculator",
+    icon: "🕰️",
+    ko: {
+      name: "그때 샀더라면 계산기",
+      shortDesc: "몇 년 전 그 주식·ETF에 투자했다면 지금 얼마가 됐을지 계산합니다",
+      description:
+        "삼성전자, 애플, S&P500 ETF 등 주요 국내외 종목을 골라 몇 년 전에 특정 금액을 투자했다면 지금 얼마가 되었을지 계산해주는 도구입니다. 월별 종가 데이터를 기반으로 수익률과 연평균 수익률(CAGR)을 함께 보여줍니다.",
+      howTo: [
+        "국내(KOSPI) 또는 해외(US) 종목 중 하나를 선택합니다.",
+        "투자금액과 투자 시점(몇 년 전)을 선택합니다.",
+        "현재 평가금액, 손익, 수익률, 연평균 수익률이 계산되어 표시됩니다.",
+      ],
+      faq: [
+        {
+          q: "실시간 시세인가요?",
+          a: "아니요, 매주 갱신되는 월별 종가 데이터를 사용합니다. 화면 하단에 표시되는 '데이터 기준일'을 참고하세요.",
+        },
+        {
+          q: "배당금도 반영되나요?",
+          a: "가격 데이터는 배당·액면분할을 반영한 수정주가(adjusted close)를 사용하지만, 배당금을 재투자했다고 가정한 정밀 계산은 아닙니다. 세금이나 환전·매매 수수료도 반영되지 않은 단순 참고용 수치입니다.",
+        },
+        {
+          q: "이 계산 결과를 투자 판단에 활용해도 되나요?",
+          a: "아니요, 이 도구는 과거 데이터를 이용한 참고용 시뮬레이션이며 투자 조언이 아닙니다. 과거 수익률이 미래 수익을 보장하지 않습니다.",
+        },
+      ],
+    },
+    en: {
+      name: "What If I Had Invested Calculator",
+      shortDesc: "See what a past investment in a stock or ETF would be worth today",
+      description:
+        "Pick a major Korean or US stock or ETF — Samsung Electronics, Apple, an S&P 500 ETF, and more — and see what an investment made years ago would be worth today, based on monthly closing price data, along with the total return and annualized return (CAGR).",
+      howTo: [
+        "Choose a Korean (KOSPI) or US ticker.",
+        "Enter the investment amount and how many years ago you invested.",
+        "The current value, profit/loss, return, and CAGR are calculated automatically.",
+      ],
+      faq: [
+        {
+          q: "Is this live market data?",
+          a: "No — it uses monthly closing prices refreshed weekly. Check the 'Data as of' date shown at the bottom of the tool.",
+        },
+        {
+          q: "Does this account for dividends?",
+          a: "Price data uses dividend- and split-adjusted closing prices, but this isn't a precise dividend-reinvestment calculation. Taxes, currency conversion, and trading fees are also not included — treat the result as a rough reference only.",
+        },
+        {
+          q: "Can I use this to make investment decisions?",
+          a: "No, this is a reference simulation based on historical data, not investment advice. Past returns don't guarantee future performance.",
+        },
+      ],
+    },
+  },
+  {
     slug: "image-compressor",
     category: "image",
     icon: "🖼️",

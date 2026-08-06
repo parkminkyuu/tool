@@ -1,0 +1,24 @@
+{
+  "generatedAt": null,
+  "tickers": {
+    "005930.KS": { "nameKo": "삼성전자", "nameEn": "Samsung Electronics", "market": "KR", "currency": "KRW", "prices": [] },
+    "000660.KS": { "nameKo": "SK하이닉스", "nameEn": "SK Hynix", "market": "KR", "currency": "KRW", "prices": [] },
+    "035420.KS": { "nameKo": "NAVER", "nameEn": "NAVER", "market": "KR", "currency": "KRW", "prices": [] },
+    "035720.KS": { "nameKo": "카카오", "nameEn": "Kakao", "market": "KR", "currency": "KRW", "prices": [] },
+    "005380.KS": { "nameKo": "현대차", "nameEn": "Hyundai Motor", "market": "KR", "currency": "KRW", "prices": [] },
+    "069500.KS": { "nameKo": "KODEX 200 (코스피200 ETF)", "nameEn": "KODEX 200 ETF", "market": "KR", "currency": "KRW", "prices": [] },
+    "360750.KS": { "nameKo": "TIGER 미국S&P500", "nameEn": "TIGER US S&P500 ETF", "market": "KR", "currency": "KRW", "prices": [] },
+    "133690.KS": { "nameKo": "TIGER 미국나스닥100", "nameEn": "TIGER US Nasdaq100 ETF", "market": "KR", "currency": "KRW", "prices": [] },
+    "AAPL": { "nameKo": "애플", "nameEn": "Apple Inc.", "market": "US", "currency": "USD", "prices": [] },
+    "MSFT": { "nameKo": "마이크로소프트", "nameEn": "Microsoft", "market": "US", "currency": "USD", "prices": [] },
+    "GOOGL": { "nameKo": "알파벳 (구글)", "nameEn": "Alphabet (Google)", "market": "US", "currency": "USD", "prices": [] },
+    "AMZN": { "nameKo": "아마존", "nameEn": "Amazon", "market": "US", "currency": "USD", "prices": [] },
+    "NVDA": { "nameKo": "엔비디아", "nameEn": "NVIDIA", "market": "US", "currency": "USD", "prices": [] },
+    "TSLA": { "nameKo": "테슬라", "nameEn": "Tesla", "market": "US", "currency": "USD", "prices": [] },
+    "META": { "nameKo": "메타 (페이스북)", "nameEn": "Meta Platforms", "market": "US", "currency": "USD", "prices": [] },
+    "SPY": { "nameKo": "SPY (S&P500 ETF)", "nameEn": "SPDR S&P 500 ETF", "market": "US", "currency": "USD", "prices": [] },
+    "QQQ": { "nameKo": "QQQ (나스닥100 ETF)", "nameEn": "Invesco QQQ (Nasdaq100 ETF)", "market": "US", "currency": "USD", "prices": [] },
+    "VOO": { "nameKo": "VOO (S&P500 ETF)", "nameEn": "Vanguard S&P 500 ETF", "market": "US", "currency": "USD", "prices": [] },
+    "BRK-B": { "nameKo": "버크셔 해서웨이", "nameEn": "Berkshire Hathaway", "market": "US", "currency": "USD", "prices": [] }
+  }
+}

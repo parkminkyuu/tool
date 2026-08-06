@@ -23,6 +23,7 @@ import LeapBirthdayCalculator from "./LeapBirthdayCalculator";
 import VolumetricWeightCalculator from "./VolumetricWeightCalculator";
 import ChosungConverter from "./ChosungConverter";
 import AnnualLeaveDaysCalculator from "./AnnualLeaveDaysCalculator";
+import InvestmentTimeMachine from "./InvestmentTimeMachine";
 
 export const toolComponents: Record<
   string,
@@ -51,4 +52,5 @@ export const toolComponents: Record<
   "volumetric-weight-calculator": VolumetricWeightCalculator,
   "chosung-converter": ChosungConverter,
   "annual-leave-days-calculator": AnnualLeaveDaysCalculator,
+  "investment-time-machine": InvestmentTimeMachine,
 };
